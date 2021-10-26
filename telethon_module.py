@@ -13,9 +13,10 @@ class TelegramBot:
         self.client.start()
 
 
-    async def SendAlert(self, eth_price, gas_rapid, comission):
+    async def SendAlert(self, eth_price, gas_rapid, comission_contract, comission_for_send):
         print('Enviando Alerta')
-        await self.client.send_message('me', f'Alert Gas ETH price: {str(eth_price)}$\nGas: {str(gas_rapid)}\nCommision (USD): {str(comission)}$')
+        await self.client.send_message('me', f'Alert Gas \nETH/USD: {str(eth_price)}$\nGas: {str(gas_rapid)}\nCommision Send (USD): {str(comission_for_send)}$\nCommision Contract WETH(USD): {str(comission_contract)}$')
+        await self.client.send_message('dorian108', f'Alert Gas \nETH/USD: {str(eth_price)}$\nGas: {str(gas_rapid)}\nCommision Send (USD): {str(comission_for_send)}$\nCommision Contract WETH(USD): {str(comission_contract)}$')
 
 
 
