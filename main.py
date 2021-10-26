@@ -2,8 +2,10 @@ import requests
 from telethon_module import TelegramBot
 from time import sleep
 
-api_id = 'ID APP'
-api_hash = 'API HASH'
+### https://my.telegram.org/ ### CREATE API HERE
+
+api_id = 'ID APP' ## API ID TELEGRAM INT
+api_hash = 'API HASH' # API HASH TELEGRAM
 bot = TelegramBot('USER SESION', api_id, api_hash)
 client = bot.client
 
